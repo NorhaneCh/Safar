@@ -3,8 +3,9 @@ import 'package:frontend/presentation/screens/activities.dart';
 import 'package:frontend/presentation/screens/explore.dart';
 import 'package:frontend/presentation/screens/home.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:frontend/presentation/screens/profile.dart';
+import 'package:frontend/presentation/screens/trip_intrest.dart';
 
-import '../../presentation/screens/profile.dart';
 
 part 'nav_state.dart';
 

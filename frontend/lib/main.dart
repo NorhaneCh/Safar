@@ -4,6 +4,7 @@ import 'package:frontend/app_router.dart';
 import 'package:frontend/core/themes.dart';
 import 'package:frontend/logic/nav/nav_cubit.dart';
 import 'package:frontend/presentation/layout.dart';
+import 'package:frontend/presentation/screens/trip_intrest.dart';
 
 void main() {
   AppRouter appRouter = AppRouter();
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         title: "Safar",
         theme: Themes.kLightTheme,
         onGenerateRoute: appRouter.onGenerateRoute,
-        home: const AppLayout(),
+        home: const TripIntrest(),
       ),
     );
   }

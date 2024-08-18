@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/core/colors.dart';
 import 'package:frontend/core/icons.dart';
 import 'package:frontend/logic/nav/nav_cubit.dart';
@@ -55,7 +54,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar>
         boxShadow: [
           BoxShadow(
             color: AppColors.kFourthColor.withOpacity(0.3),
-            offset: Offset(0, -0.75),
+            offset: const Offset(0, -0.75),
             blurRadius: 5,
           ),
         ],
