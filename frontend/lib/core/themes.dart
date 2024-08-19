@@ -17,16 +17,16 @@ class Themes {
       onSurface: AppColors.kDarkColor,
       brightness: Brightness.light,
     ),
-    // splashColor: Colors.transparent,
-    // highlightColor: Colors.transparent,
-    // hoverColor: Colors.transparent,
-    // bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    //   backgroundColor: AppColors.kWhiteColor,
-    //   elevation: 0,
-    //   unselectedItemColor: AppColors.kSecondaryColor,
-    //   selectedItemColor: AppColors.kPrimaryColor,
-    //   type: BottomNavigationBarType.fixed,
-    // ),
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    hoverColor: Colors.transparent,
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: AppColors.kWhiteColor,
+      elevation: 0,
+      unselectedItemColor: AppColors.kFourthColor,
+      selectedItemColor: AppColors.kSecondaryColor,
+      type: BottomNavigationBarType.fixed,
+    ),
     fontFamily: 'Poppins',
   );
 }

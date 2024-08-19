@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/app_router.dart';
 import 'package:frontend/core/themes.dart';
+import 'package:frontend/logic/chatbot/chatbot_cubit.dart';
 import 'package:frontend/logic/nav/nav_cubit.dart';
-import 'package:frontend/presentation/layout.dart';
 import 'package:frontend/presentation/screens/trip_intrest.dart';
 
 void main() {
@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<NavigationCubit>(
           create: (context) => NavigationCubit(),
+        ),
+        BlocProvider<ChatbotCubit>(
+          create: (context) => ChatbotCubit(),
         ),
       ],
       child: MaterialApp(

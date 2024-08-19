@@ -4,7 +4,6 @@ import 'package:frontend/core/icons.dart';
 import 'package:frontend/core/images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frontend/presentation/screens/destInterest.dart';
-import 'package:frontend/presentation/screens/home.dart';
 
 List<bool> actSelections = List.generate(4, (index) => false);
 
@@ -40,22 +39,22 @@ class _ActInterestState extends State<ActInterest>
     final List<Map<String, dynamic>> cardData = [
       {
         'text': 'Urban Cities',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.city,
         'color': AppColors.kPrimaryColor,
       },
       {
         'text': 'Beaches & Islands',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.umbrella_beach,
         'color': AppColors.kSecondaryColor,
       },
       {
         'text': 'Mountains & Nature',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.mount,
         'color': AppColors.kSecondaryColor,
       },
       {
         'text': 'Countryside & Villages',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.houses,
         'color': AppColors.kPrimaryColor,
       },
     ];

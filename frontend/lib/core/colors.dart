@@ -7,4 +7,5 @@ class AppColors {
   static const kFourthColor = Color(0xFFD4D8E2);
   static const kDarkColor = Color(0xFF000000);
   static const kWhiteColor = Color(0xFFFFFFFF);
+  static const kGrey = Color(0xFFF7F9FD);
 }

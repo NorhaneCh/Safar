@@ -4,8 +4,6 @@ import 'package:frontend/core/icons.dart';
 import 'package:frontend/core/images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:frontend/presentation/layout.dart';
-import 'package:frontend/presentation/screens/act_interest.dart';
-import 'package:frontend/presentation/screens/home.dart';
 
 List<bool> selections = List.generate(6, (index) => false);
 
@@ -41,32 +39,32 @@ class _DestinterestState extends State<Destinterest>
     final List<Map<String, dynamic>> cardData = [
       {
         'text': 'Hiking & Outdoor Adventures',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.compass_1,
         'color': AppColors.kPrimaryColor,
       },
       {
         'text': 'Museums & Art Galleries',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.art,
         'color': AppColors.kSecondaryColor,
       },
       {
         'text': 'Shopping & Markets',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.shop,
         'color': AppColors.kSecondaryColor,
       },
       {
         'text': 'Culinary Tours & Dining Out',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.food,
         'color': AppColors.kPrimaryColor,
       },
       {
         'text': 'Relaxation & Spa Treatments',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.relax,
         'color': AppColors.kPrimaryColor,
       },
       {
         'text': 'Beach Activities',
-        'icon': MyIcons.ticket,
+        'icon': IntrestIcons.umbrella_beach,
         'color': AppColors.kSecondaryColor,
       },
     ];

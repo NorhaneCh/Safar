@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import 'package:frontend/presentation/layout.dart';
 import 'package:frontend/presentation/screens/act_interest.dart';
 import 'package:frontend/presentation/screens/activities.dart';
+import 'package:frontend/presentation/screens/chatbot.dart';
 import 'package:frontend/presentation/screens/destInterest.dart';
 import 'package:frontend/presentation/screens/explore.dart';
 import 'package:frontend/presentation/screens/home.dart';
@@ -21,6 +22,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const AppLayout());
       case '/home':
         return MaterialPageRoute(builder: (_) => const HomePage());
+      case '/chatbot':
+        return MaterialPageRoute(builder: (_) => const ChatPage());
       case '/activities':
         return MaterialPageRoute(builder: (_) => const Activities());
       case '/profile':
