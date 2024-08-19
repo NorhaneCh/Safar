@@ -1,12 +1,27 @@
-const express = require('express');
+const userRoute = require("./Routes/userRoute");
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
+
+app.use(bodyParser.json());
 
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+//local db just for testing cuz i don't have access to the cloud db
+// const mongoUrl = process.env.MONGODB_URI;
+const mongoUrl = "mongodb://localhost:27017/juju";
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`App is running on http://localhost:${port}`);
+//connect to local db with mongoose
+const mongoose = require("mongoose");
+mongoose.connect(mongoUrl).then(() => {
+  console.log("Connected to the database!");
+  app.listen(port, () => {
+    console.log(`App is running on http://localhost:${port}`);
+  });
 });
+
+app.use("/users", userRoute);

@@ -5,13 +5,14 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const createToken = (_id) => {
-  const jwtKey = process.env.JWT_SECRET;
+  const jwtKey = "process.env.JWT_SECRET;";
 
   return jwt.sign({ _id }, jwtKey, { expiresIn: "3d" });
 };
 
 const registerUser = async (req, res) => {
   try {
+    console.log("req.body", req.body);
     const { name, email, password, gender, country, birthday, interests } =
       req.body;
 
@@ -115,28 +116,34 @@ const getUsers = async (req, res) => {
 };
 
 const updateInterests = async (req, res) => {
-    const { userId } = req.params;
-    const { interests } = req.body;
-  
-    try {
-      if (!Array.isArray(interests)) {
-        return res.status(400).json("Interests must be an array of strings");
-      }
-  
-      const user = await userModel.findByIdAndUpdate(
-        userId,
-        { interests },
-        { new: true, runValidators: true } // Returns the updated document and applies validators
-      );
-  
-      if (!user) {
-        return res.status(404).json("User not found");
-      }
-  
-      res.status(200).json(user);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error.message);
+  const { userId } = req.params;
+  const { interests } = req.body;
+
+  try {
+    if (!Array.isArray(interests)) {
+      return res.status(400).json("Interests must be an array of strings");
     }
-  };
-module.exports = { registerUser, loginUser, findUser, getUsers,updateInterests };
+
+    const user = await userModel.findByIdAndUpdate(
+      userId,
+      { interests },
+      { new: true, runValidators: true } // Returns the updated document and applies validators
+    );
+
+    if (!user) {
+      return res.status(404).json("User not found");
+    }
+
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error.message);
+  }
+};
+module.exports = {
+  registerUser,
+  loginUser,
+  findUser,
+  getUsers,
+  updateInterests,
+};
